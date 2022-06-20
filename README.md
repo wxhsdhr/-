@@ -1,39 +1,25 @@
-# 信安大赛源码
+#信安大赛源码说明
+#
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+##环境配置
+###根目录中的**requirement.txt**即是项目所需要的库以及依赖
 
-#### 软件架构
-软件架构说明
+*请将根目录中所有的压缩包先进行解压，解压时仅选择解压到当前文件夹，以防止位置不正确造成程序运行错误*
 
+*如果配置clip中出现问题，可以直接在./clip-install文件夹中运行 `python setup.py install`*
 
-#### 安装教程
+##如何运行
+###根目录文件夹下的**main.py**是项目的入口文件，该项目只需要运行main.py即可
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+##启动main.py后项目会干什么？
+1. 项目会首先打开微博账号，利用爬虫进行正常微博账号的运行，包括自动点赞、转发、抓取新闻，生成摘要再进行发送等一系列正常操作。
+2. 您可以手动更改根目录下**./bit_steam/bit_stream.txt**的内容，自行确定需要隐写的内容。
+3. 项目可以将需要隐写的内容嵌入到**./images**文件夹中的图片所生成的描述性文字中，并将其发送到微博。
 
-#### 使用说明
+####通过以上操作我们可以实现秘密的传输我们需要的信息在微博中，并且由于我们之前维护了一个正常的社交机器人，因此我们的隐写信息混淆在正常发送的信息中，从而造成一定的不可区分性。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+##备注
 
-#### 参与贡献
+**本次实验的微博账号昵称：端庄的厄耳**
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+由于微博cookie的不断变化，爬虫的可行性需要不断更新根目录下**./crawler**中的 **cookie** 来保证，如需验证程序可行性时产生问题，请联系 ***QQ：390160845*** ，届时将会为您更新新的cookie。我们为给您带来的不便深表歉意。
